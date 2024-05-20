@@ -1,38 +1,27 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-// theme
 import ThemeProvider from "./theme/index";
+import Homepage from "./pages/Homepage";
+import { Box, Container } from "@mui/material";
+import HeroAsBackground from "./components/HeroAsBackground";
+import Navbar from "./widget/Navbar";
+import OurServicesPage from "./pages/OurServicesPage";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
+    <Box
+      sx={{
+        background: "#2C2727",
+        minHeight: "100vh",
+      }}
+    >
       <ThemeProvider>
-        <div>
-          <a href="https://vitejs.dev" target="_blank">
-            <img src={viteLogo} className="logo" alt="Vite logo" />
-          </a>
-          <a href="https://react.dev" target="_blank">
-            <img src={reactLogo} className="logo react" alt="React logo" />
-          </a>
-        </div>
-        <h1>Vite + React</h1>
-        <div className="card">
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test HMR
-          </p>
-        </div>
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
-        </p>
+        <HeroAsBackground />
+        <Navbar />
+        <Container>
+          <Homepage />
+          <OurServicesPage />
+        </Container>
       </ThemeProvider>
-    </>
+    </Box>
   );
 }
 

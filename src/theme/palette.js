@@ -3,25 +3,38 @@ import { alpha } from "@mui/material/styles";
 // ----------------------------------------------------------------------
 
 // SETUP COLORS
+// const GREY = {
+//   0: "#FFFFFF",
+//   100: "#E5E4E4",
+//   200: "#CAC9C9",
+//   300: "#B1ADAD",
+//   400: "#979191",
+//   500: "#7E7575",
+//   600: "#635B5B",
+//   700: "#484141",
+//   800: "#2C2727",
+//   900: "#100E0E",
+// };
+
 const GREY = {
-  0: "#FFFFFF",
-  100: "#F9FAFB",
-  200: "#F4F6F8",
-  300: "#DFE3E8",
-  400: "#C4CDD5",
-  500: "#919EAB",
-  600: "#637381",
-  700: "#454F5B",
-  800: "#212B36",
-  900: "#161C24",
+  900: "#FFFFFF",
+  800: "#E5E4E4",
+  700: "#CAC9C9",
+  600: "#B1ADAD",
+  500: "#979191",
+  400: "#7E7575",
+  300: "#635B5B",
+  200: "#484141",
+  100: "#2C2727",
+  0: "#100E0E",
 };
 
 const PRIMARY = {
-  lighter: "#5fc56d",
-  light: "#3dad4d",
-  main: "#155d1f",
-  dark: "#0f4817",
-  darker: "#093910",
+  lighter: "#C7AC5C",
+  light: "#AF9752",
+  main: "#978348",
+  dark: "#806F3E",
+  darker: "#6A5C35",
   contrastText: "#fff",
 };
 
@@ -71,7 +84,7 @@ const ERROR = {
 };
 
 const palette = {
-  common: { black: "#000", white: "#fff" },
+  common: { black: "#313131", white: "#ebebeb" },
   primary: PRIMARY,
   secondary: SECONDARY,
   info: INFO,
@@ -85,6 +98,8 @@ const palette = {
     secondary: GREY[600],
     success: SUCCESS.dark,
     disabled: GREY[500],
+    // contrast: GREY[200],
+    contrast: GREY[800],
   },
   background: {
     paper: "#fff",
@@ -92,8 +107,8 @@ const palette = {
     neutral: GREY[200],
   },
   action: {
-    active: GREY[600],
-    hover: alpha(GREY[500], 0.08),
+    active: GREY[100],
+    hover: alpha(GREY[300], 0.8),
     selected: alpha(GREY[500], 0.16),
     disabled: alpha(GREY[500], 0.8),
     disabledBackground: alpha(GREY[500], 0.24),
