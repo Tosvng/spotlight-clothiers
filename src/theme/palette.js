@@ -3,48 +3,35 @@ import { alpha } from "@mui/material/styles";
 // ----------------------------------------------------------------------
 
 // SETUP COLORS
-// const GREY = {
-//   0: "#FFFFFF",
-//   100: "#E5E4E4",
-//   200: "#CAC9C9",
-//   300: "#B1ADAD",
-//   400: "#979191",
-//   500: "#7E7575",
-//   600: "#635B5B",
-//   700: "#484141",
-//   800: "#2C2727",
-//   900: "#100E0E",
-// };
-
 const GREY = {
-  900: "#FFFFFF",
-  800: "#E5E4E4",
-  700: "#CAC9C9",
-  600: "#B1ADAD",
-  500: "#979191",
-  400: "#7E7575",
-  300: "#635B5B",
-  200: "#484141",
-  100: "#2C2727",
-  0: "#100E0E",
+  0: "#FFFFFF",
+  100: "#F9FAFB",
+  200: "#F4F6F8",
+  300: "#DFE3E8",
+  400: "#C4CDD5",
+  500: "#919EAB",
+  600: "#637381",
+  700: "#454F5B",
+  800: "#212B36",
+  900: "#161C24",
 };
 
+// Gold palette
 const PRIMARY = {
-  lighter: "#C7AC5C",
-  light: "#AF9752",
-  main: "#978348",
-  dark: "#806F3E",
-  darker: "#6A5C35",
-  contrastText: "#fff",
+  lighter: "#FFF5E0",
+  light: "#FFD700", // Bright gold
+  main: "#D4AF37", // Classic gold
+  dark: "#B8860B", // Dark gold
+  darker: "#996515", // Deep gold
 };
 
+// White/grey palette for secondary
 const SECONDARY = {
-  lighter: "#D6E4FF",
-  light: "#84A9FF",
-  main: "#3366FF",
-  dark: "#1939B7",
-  darker: "#091A7A",
-  contrastText: GREY[800],
+  lighter: "#FFFFFF",
+  light: "#FAFAFA",
+  main: "#F5F5F5",
+  dark: "#E0E0E0",
+  darker: "#CCCCCC",
 };
 
 const INFO = {
@@ -84,7 +71,7 @@ const ERROR = {
 };
 
 const palette = {
-  common: { black: "#313131", white: "#ebebeb" },
+  common: { black: "#000000", white: "#FFFFFF" },
   primary: PRIMARY,
   secondary: SECONDARY,
   info: INFO,
@@ -92,27 +79,24 @@ const palette = {
   warning: WARNING,
   error: ERROR,
   grey: GREY,
-  divider: alpha(GREY[500], 0.24),
+  divider: "rgba(212, 175, 55, 0.12)",
   text: {
     primary: GREY[800],
     secondary: GREY[600],
-    success: SUCCESS.dark,
     disabled: GREY[500],
-    // contrast: GREY[200],
-    contrast: GREY[800],
   },
   background: {
-    paper: "#fff",
-    default: GREY[100],
-    neutral: GREY[200],
+    paper: "#FFFFFF",
+    default: "#FAFAFA",
+    neutral: "#F5F5F5",
   },
   action: {
-    active: GREY[100],
-    hover: alpha(GREY[300], 0.8),
-    selected: alpha(GREY[500], 0.16),
-    disabled: alpha(GREY[500], 0.8),
-    disabledBackground: alpha(GREY[500], 0.24),
-    focus: alpha(GREY[500], 0.24),
+    active: PRIMARY.main,
+    hover: PRIMARY.lighter,
+    selected: PRIMARY.light,
+    disabled: GREY[500],
+    disabledBackground: GREY[200],
+    focus: PRIMARY.light,
     hoverOpacity: 0.08,
     disabledOpacity: 0.48,
   },

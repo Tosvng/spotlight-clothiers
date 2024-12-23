@@ -1,41 +1,30 @@
 import { Box } from "@mui/material";
-import fullHero from "../assets/FullHero.png";
 
-const heroHeight = "60vh";
-
-const HeroAsBackground = () => {
+function HeroAsBackground() {
   return (
     <Box
       sx={{
         position: "absolute",
-        height: heroHeight,
-        width: "100vw",
         top: 0,
         left: 0,
-      }}
-    >
-      <Box
-        sx={{
+        right: 0,
+        height: "100vh",
+        backgroundImage: "url(../assets/FullHero.png)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        "&::after": {
+          content: '""',
           position: "absolute",
-          height: heroHeight,
-          width: "100vw",
           top: 0,
           left: 0,
-          backgroundImage:
-            "linear-gradient(to bottom, rgba(17,15,16, 0.2) 0%, rgba(17,15,16, 0.5) 30%,   rgba(17,15,16, 0.8) 90%)",
-        }}
-      />
-      <img
-        src={fullHero}
-        alt="hero"
-        style={{
-          height: "100%",
-          width: "100%",
-          objectFit: "cover",
-        }}
-      />
-    </Box>
+          right: 0,
+          bottom: 0,
+          backgroundColor: "rgba(0, 0, 0, 0.5)", // Dark overlay
+        },
+        zIndex: 1,
+      }}
+    />
   );
-};
+}
 
 export default HeroAsBackground;
